@@ -1,0 +1,8 @@
+package ex01;
+
+public class App {
+
+	Downloader d1 = new Downloader(()->{});
+	d1.down();
+	
+}

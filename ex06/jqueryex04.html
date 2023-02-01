@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <p id="test">This is some <b>bold</b> text in a paragraph.</p>
+    <p id="content"></p>
+    <input type="text" id="title" value="">
+
+    <button id="btn1">Show Text</button>
+    <button id="btn2">Show HTML</button>
+    <button id="btn3">Set HTML</button>
+    <button id="btn4">Show VAL</button>
+
+    <script>
+
+        $("#btn1").click(function () {
+            alert("Text: " + $("#test").text());
+        });
+        $("#btn2").click(function () {
+            alert("HTML: " + $("#test").html());
+        });
+        $("#btn3").click(function () {
+            alert($("#content").html("나옹"));
+        });
+        $("#btn4").click(function () {
+            alert("title: " + $("#content").html("제목입니다"));
+        });
+
+    </script>
+</body>
+
+</html>

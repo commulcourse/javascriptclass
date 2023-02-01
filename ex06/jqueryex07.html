@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/0d1c1758fd.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/0d1c1758fd.css" crossorigin="anonymous">
+    <style>
+        .my-xl {
+            font-size: 300px;
+        }
+
+        .my-cursor {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <i id="heart" class="fa-solid fa-regular fa-heart my-xl my-cursor"></i>
+        <!-- <i id="heart" class="fa-regular fa-heart my-xl my-cursor" value="no"></i> -->
+
+        <script>
+            $("#heart").click(() => {
+                $("#heart").toggleClass("fa-solid");
+                // $("#heart").removeClass("fa-regular")
+                // $("#heart").addClass("fa-solid")
+
+            });
+            // $("#heart").click(() => {
+            //     let value = $("#heart").val();
+            //     if (value == "ok") {
+            //         $("#heart").removeClass("fa-solid");
+            //         $("heart").val("no");
+            //     } else {
+            //         $("#heart").addClass("fa-solid");
+            //         $("heart").val("ok");
+            //     }
+            // }
+            // );
+        </script>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <h1>게시글 삭제하기</h1>
+    <hr>
+    <input type="text" id="id" placeholder="Enter id">
+    <button type="button" onclick="deleteById()">삭제하기</button>
+
+    <script>
+        function deleteById() {
+            // 1. 사용자 값 받기
+            let id = $("#id").val();
+
+            // 2. 유효성 검사
+            if (id == "" || id == "undefined") {
+                alert("삭제할 id를 입력해주세요.");
+                return;
+            }
+
+            // 3. 통신하기
+            $.ajax({
+                type: "delete",
+                url: `https://jsonplaceholder.typicode.com/posts/${id}`
+            }).done((res) => {
+                alert("성공");
+                location.href = "https://www.naver.com";
+            }).fail((err) => {
+                alert("실패");
+                console.log(err);
+            });
+        }
+
+    </script>
+</body>
+
+</html>
